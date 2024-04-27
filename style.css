@@ -25,7 +25,27 @@ a:any-link {
 
 body {
   color: whitesmoke;
-  font-family: Arial;
+  font-family: "Jost", sans-serif;
   font-size: clamp(1rem, 3vh, 2.5rem);
   line-height: 1.4;
+}
+
+/*||HEADER*/
+header {
+  font-family: 'Roboto Mono', monospace;
+}
+
+.header_logo {
+  background-color: #4e1fb3;
+  align-items: center;
+  color: #eeff88;
+  display: flex;
+  font-weight: 700;
+  height: 40px;
+}
+
+.header_logo img {
+  filter: invert(98%) sepia(84%) saturate(692%) hue-rotate(12deg) brightness(102%) contrast(102%);
+  max-width: 2em;
+  min-width: 30px;
 }
