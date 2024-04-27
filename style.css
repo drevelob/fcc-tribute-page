@@ -49,3 +49,53 @@ header {
   max-width: 2em;
   min-width: 30px;
 }
+
+/*||MAIN*/
+main {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 60px 100px;
+}
+
+img {
+  cursor: pointer;
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+/*||LOGO*/
+.char_logo {
+  align-items: center;
+  color: #f1e5db;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 520px;
+}
+
+.char_logo img {
+  filter: invert(100%) sepia(75%) saturate(6350%) hue-rotate(330deg) brightness(115%) contrast(110%);
+  max-width: 500px;
+  min-width: 75px;
+  width: 4em;
+}
+
+.logo_title {
+  color: #f1e5db;
+  font-family: "Tilt Neon", sans-serif;
+  font-size: 3em;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.logo_subtitle {
+  color: #03ffef;
+  font-size: 2em;
+  margin: 0.2em;
+  filter: drop-shadow(2px 2px 30px #03ffef);
+}
+
+.logo_description {
+  font-style: italic;
+}
