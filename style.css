@@ -169,3 +169,42 @@ ul .item {
   padding: 30px 0 10px 150px;
   text-wrap: wrap;
 }
+
+/*||CAPTION*/
+.image_caption {
+  border-radius: 10px;
+  border: 1px solid rgba(8, 252, 252, 0.778);
+  bottom: 0;
+  position: absolute;
+  right: 75px;
+  width: 300px;
+  z-index: 1;
+}
+
+.image_caption {
+  backdrop-filter: blur(5px) saturate(200%);
+  background-color: hsla(198, 40%, 80%, 0.2);
+  box-shadow: 0 0 10px rgba(8, 61, 252, 0.778);
+  color: #dbf2f2;
+  font-size: 0.8em;
+  font-weight: bold;
+  line-height: 1.6;
+  padding: 10px;
+}
+
+.image_caption span {
+  border: 2px solid black;
+  display: inline-block;
+  height: 1em;
+  margin: 0 10px;
+  width: 1em;
+}
+
+.image_caption p:first-child span {
+  background-color: whitesmoke;
+  border-radius: 50%;
+}
+
+.image_caption p:last-child span {
+  background-color: #03ffef;
+}
