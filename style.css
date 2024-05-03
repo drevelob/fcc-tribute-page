@@ -239,3 +239,13 @@ ul .item {
   margin-bottom: -4px;
   margin-right: -4px;
 }
+
+/*||HOVER*/
+.footer-button:hover {
+  filter: invert(1) brightness(1.2);
+}
+
+.image_caption:hover,
+.item:hover {
+  filter: brightness(1.2);
+}
