@@ -2,6 +2,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Tilt+Neon&display=swap');
 
+/*||VARIABLES*/
+:root {
+  /*Color*/
+  --BGCOL: hsl(210, 100%, 7%);
+  --FNCOL: #f9faf8;
+  --LKCOL: #eeff88;
+  --A1COL: hsl(259, 70%, 41%);
+  --A2COL: #f1e5db;
+  --A3COL: #03ffef;
+  --FMCOL: linear-gradient(90deg,
+      hsl(210, 100%, 7%)0%,
+      hsl(210, 100%, 10%)50%,
+      hsl(210, 100%, 7%)100%);
+}
+
 /*||RESET*/
 *,
 *::before,
@@ -12,19 +27,19 @@
 }
 
 html {
-  background-color: #012;
+  background-color: var(--BGCOL);
   font-size: 10px;
   scroll-behavior: smooth;
 }
 
 a:any-link {
-  color: #eeff88;
+  color: var(--LKCOL);
   text-decoration: none;
   font-weight: bold;
 }
 
 body {
-  color: whitesmoke;
+  color: var(--FNCOL);
   font-family: "Jost", sans-serif;
   font-size: clamp(1rem, 2.5vh, 2.5rem);
   line-height: 1.4;
@@ -36,9 +51,9 @@ header {
 }
 
 .header_logo {
-  background-color: #4e1fb3;
+  background-color: var(--A1COL);
   align-items: center;
-  color: #eeff88;
+  color: var(--LKCOL);
   display: flex;
   font-weight: 700;
   height: 40px;
@@ -52,6 +67,7 @@ header {
 
 /*||MAIN*/
 main {
+  background: var(--FMCOL);
   margin: 0 auto;
   max-width: 1200px;
   min-width: 340px;
@@ -68,7 +84,7 @@ img {
 /*||LOGO*/
 .char_logo {
   align-items: center;
-  color: #f1e5db;
+  color: var(--A2COL);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -83,7 +99,7 @@ img {
 }
 
 .logo_title {
-  color: #f1e5db;
+  color: var(--A2COL);
   font-family: "Tilt Neon", sans-serif;
   font-size: 3em;
   font-style: normal;
@@ -91,10 +107,10 @@ img {
 }
 
 .logo_subtitle {
-  color: #03ffef;
+  color: var(--A3COL);
   font-size: 2em;
   margin: 0.2em;
-  filter: drop-shadow(2px 2px 30px #03ffef);
+  filter: drop-shadow(2px 2px 30px var(--A3COL));
 }
 
 .logo_description {
@@ -119,6 +135,10 @@ img {
   position: relative;
 }
 
+.char_image img {
+  filter: drop-shadow(1px 1px 10px hsl(210, 100%, 3%));
+}
+
 /*||INFO*/
 .char_info {
   display: flex;
@@ -132,8 +152,8 @@ img {
   display: flex;
   flex-wrap: wrap;
   font-size: 0.7em;
-  gap: 10px;
-  justify-content: center;
+  gap: 15px;
+  justify-content: space-evenly;
   list-style: none;
   margin: 20px 0;
 }
@@ -164,9 +184,13 @@ li:nth-child(6) {
 }
 
 ul .item {
+  backdrop-filter: blur(10px) saturate(110%);
   background-size: 128px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px var(--BGCOL);
   height: 150px;
-  width: 290px;
+  width: 285px;
+  z-index: 1;
 }
 
 .item p {
@@ -191,7 +215,6 @@ ul .item {
   border-radius: 10px;
   border: 1px solid rgba(8, 252, 252, 0.778);
   box-shadow: 0 0 10px rgba(8, 61, 252, 0.778);
-  color: #dbf2f2;
   font-size: 0.8em;
   font-weight: bold;
   line-height: 1.6;
@@ -212,13 +235,13 @@ ul .item {
 }
 
 .image_caption p:last-child span {
-  background-color: #03ffef;
+  background-color: var(--A3COL);
 }
 
 /*||FOOTER*/
 .footer {
-  color: #f9faf8;
-  background-color: #4e1fb3;
+  color: var(--FNCOL);
+  background-color: var(--A1COL);
   font-family: monospace;
   padding: 20px 30px;
 }
@@ -228,7 +251,7 @@ ul .item {
 }
 
 .footer-button {
-  background-color: #4e1fb3;
+  background-color: var(--A1COL);
   border-radius: 5px;
   filter: invert(1);
   padding: 5px
