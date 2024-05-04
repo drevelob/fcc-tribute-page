@@ -135,10 +135,6 @@ img {
   position: relative;
 }
 
-.char_image img {
-  filter: drop-shadow(1px 1px 10px hsl(210, 100%, 3%));
-}
-
 /*||INFO*/
 .char_info {
   display: flex;
